@@ -1,4 +1,5 @@
 预览图：
+
 ![images](https://github.com/eleven-123/jquery.slotmachine/blob/master/preview/GIF.gif)
 
 JS常用属性、方法、事件详解:
