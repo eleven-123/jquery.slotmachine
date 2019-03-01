@@ -19,5 +19,5 @@ JS常用属性、方法、事件详解:
      machine.stop(); 停止旋转
      machine.active; 得到选中的元素的索引
      machine.running; 检测是否正在旋转，true表示正在旋转
-     machine.stopping; 检测是否已经停止
+     machine.stopping; 检测是否已经停止 
      machine.destroy(); 摧毁旋转节点
