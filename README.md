@@ -3,7 +3,7 @@
 JS常用属性、方法、事件详解:
 
 （1）初始化方法 var machine = $("#id").slotMachine({}); 返回当前旋转的对象。
-     slotMachine()方法里面传递初始化的参数，比如:     
+     slotMachine()方法里面传递初始化的参数，如:     
          active：表示初始化的时候显示项的索引，从0开始         
          delay：切换两张图片的间隔时间（毫秒单位）         
          auto：是否自动旋转，取值为true or false         
