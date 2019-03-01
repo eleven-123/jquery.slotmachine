@@ -1,0 +1,53 @@
+*{padding:0;margin:0;} 
+body,html{height:100%;-webkit-tap-highlight-color:transparent;}
+html{touch-action:manipulation;}
+body{font-size: 16px;}
+ul{list-style:none}
+img{display: inline-block;vertical-align: middle;}
+.clearfix::before, .clearfix::after {content: "";display: table;clear: both;} 
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: #aaa;font-size:14px;}
+
+body{background: #f4f4f4;}
+body.whiteBg{background: #fff;}
+.redColor{color: #ff5500 !important;}
+.blueColor{color: #0090ff !important;}
+
+/*头部 - 标题栏*/
+.header_wrap{background: #ff7e00;color: #fff;box-shadow: none;}
+.header_wrap .title{color:#fff;font-size: 18px;}
+.header_wrap.mui-bar .icon_wrap{position: absolute;top: 0;left:0;width:44px;height:44px;margin:0;}
+.header_wrap .icon_wrap .icon{height: 16px;position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
+
+.mui-content{background: transparent;}
+
+/*底部 tabBar*/
+.tabBar.mui-bar{background: #fff;border-top:1px solid #eee;box-shadow: none;}
+.tabBar.mui-bar-tab .mui-tab-item{padding-top: 6px;}
+.tabBar .icon{width:22px;height: 22px;display: inline-block;}
+.tabBar .icon img{width: 100%;height: 100%;}
+.tab_txt{display: block;font-size: 10px;color: #2c2c2c;}
+.tabBar .mui-active .tab_txt{color: #ff840a;}
+
+/*加入购物车 - 动画*/
+.u-flyer{display: block;width: 20px;height: 20px;border-radius: 50%;background: rgba(0,0,0,.3);-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+box-shadow: 0 0 20px 0 rgba(0,0,0,.1);  position: fixed;z-index:1;} 
+@keyframes scale{
+	30%{
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+	}
+	50% {
+	    -webkit-transform: scale(1.2);
+	    transform: scale(1.2);
+	}
+	70% {
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+	}
+	100% {
+	    -webkit-transform: scale(1);
+	    transform: scale(1);
+	}
+}
+
+.swiper-pagination-bullet-active{background: #f50;}
