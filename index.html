@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>幸运购</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+        <link rel="stylesheet" href="css/flexible.css">
+        <link rel="stylesheet" href="css/mui.min.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/flexible.js"></script>
+    </head>
+    <body class="blueBg">
+        <header class="mui-bar mui-bar-nav header_wrap">
+            <a href="javascript:window.history.back();" class="mui-action-back mui-icon mui-pull-left icon_wrap">
+                <img src="images/icon_back.png" class="icon">
+            </a>
+            <h1 class="mui-title title">幸运购</h1>
+        </header>
+        <div class="mui-content">
+            <div class="draw_top">
+            	<img src="images/draw_top_bg.png">
+            </div>
+            <div class="draw_wrap">
+            	<dl class="clearfix">
+					<dd id="machine1" class="mui-pull-left">
+						<div class="cell">
+							<img src="images/1-1.png" />
+						</div>
+						<div class="cell">
+							<img src="images/1-2.png" />
+						</div>
+						<div class="cell">
+							<img src="images/1-3.png" />
+						</div>
+					</dd>
+					<dd id="machine2" class="mui-pull-left">
+						<div class="cell">
+							<img src="images/1-2.png" />
+						</div>
+						<div class="cell">
+							<img src="images/1-3.png" />
+						</div>
+						<div class="cell">
+							<img src="images/1-1.png" />
+						</div>
+					</dd>
+					<dd id="machine3" class="mui-pull-left">
+						<div class="cell">
+							<img src="images/1-3.png" />
+						</div>
+						<div class="cell">
+							<img src="images/1-1.png" />
+						</div>
+						<div class="cell">
+							<img src="images/1-2.png" />
+						</div>
+					</dd>
+				</dl>
+            	<div id="stopBtn" class="stop_btn" data-type="stopBtn"></div>
+            	<div class="result">
+            		<p>未中奖，再接再厉</p>
+            		<a id="alignBtn" class="align_btn" href="#">再来一次</a>
+            	</div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.0.js"></script>
+        <script src="js/jquery.slotmachine.js"></script>
+        <script>        	
+			$(function () {				
+				var machine1 = $("#machine1").slotMachine({
+					active:0,
+					delay:500
+				});				
+				var machine2 = $("#machine2").slotMachine({
+					active:1,
+					delay:500
+				});				
+				var machine3 = $("#machine3").slotMachine({
+					active:2,
+					delay:500
+				});
+				function startSlotmachine(){
+					machine1.shuffle();
+					machine2.shuffle();
+					machine3.shuffle();		
+				}
+				startSlotmachine()
+				$("#alignBtn").click(function(){
+					startSlotmachine()
+				});				
+				$("#stopBtn").click(function(){
+					if(machine1.isRunning()){
+						machine1.stop(true);
+						setTimeout(function(){
+							setTimeout(machine2.stop(true));
+						},500)
+						setTimeout(function(){
+							setTimeout(machine3.stop(true));
+						},1000)
+					}
+				});
+			});
+
+        </script>
+    </body>
+</html>
+
